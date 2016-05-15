@@ -10,7 +10,10 @@ var gulp 			= require('gulp'),
 	autoprefixer 	= require('gulp-autoprefixer'),
 	concat 			= require('gulp-concat'),
 	server 			= require('gulp-server-livereload'),
-	fileinclude 	= require('gulp-file-include'),
+	nunjucks 		= require('gulp-nunjucks-render'),
+	data 			= require('gulp-data'),
+	fs 				= require('fs'),
+	path 			= require('path'),
 	livereload 		= require('gulp-livereload');
 
 
@@ -30,6 +33,7 @@ gulp.task('default', function() {
 // npm run watch
 gulp.task('watch', function() {
 	gulp.watch(Config.src + '/html/**/*.html', ['html']);
+	gulp.watch(Config.src + '/data/*.json', ['html']);
 	gulp.watch(Config.src + '/sass/**/*.scss', ['sass']);
 	gulp.watch(Config.src + '/js/**/*.js', ['js']);
 	gulp.watch(Config.src + '/assets/images/*', ['images']);
@@ -65,8 +69,12 @@ gulp.task('clean', function() {
 gulp.task('html', function(){
 
 	gulp.src(Config.src + '/html/*.html')
-		.pipe(fileinclude({
-			prefix: '@@'
+		.pipe(data(function(file) {
+			return JSON.parse(fs.readFileSync('./src/data/' + path.basename(file.path).slice(0, -5) + '.json'));
+	      //return require('../src/data/' + path.basename(file.path).slice(0, -5) + '.json');
+	    }))
+		.pipe(nunjucks({
+			path: Config.src + '/html/'
 		}))
 		.pipe(gulp.dest(Config.dest))
 		.pipe(livereload());
