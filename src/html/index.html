@@ -1,0 +1,28 @@
+@@include('includes/base/head.html', { "title": "Seah" })
+@@include('includes/base/navigation.html')
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-xs-12 col-sm-6">
+				@@include('includes/modules/module.html', { 
+					"title" : "Module 1",
+					"text" 	: "module 1 is an amazing module",
+					"buttonLabel" : "Test me!",
+					"link" : "www.google.com"
+				})
+			</div>
+		
+			<div class="col-xs-12 col-sm-6">
+				@@include('includes/modules/module.html', { 
+					"title" : "Module 2",
+					"text" 	: "module 2 is an even better module",
+					"buttonLabel" : "Test me!",
+					"link" : "www.google.com"
+				})
+			</div>
+		
+		</div>
+	</div>
+
+@@include('includes/base/foot.html')
