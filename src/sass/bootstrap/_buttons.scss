@@ -17,7 +17,7 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   white-space: nowrap;
-  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-large, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
 
   &,
@@ -151,6 +151,8 @@ a.btn {
 .btn-block {
   display: block;
   width: 100%;
+  line-height: 100px;
+  vertical-align: middle;
 }
 
 // Vertically space out multiple block buttons
@@ -166,3 +168,6 @@ input[type="button"] {
     width: 100%;
   }
 }
+
+
+

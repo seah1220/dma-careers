@@ -38,6 +38,7 @@
 
 .row {
   @include make-row;
+  padding: 20px 0;
 }
 
 

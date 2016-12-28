@@ -41,6 +41,7 @@
 @import "bootstrap/wells";
 @import "bootstrap/close";
 
+
 // BOOTSTRAP: Components w/ JavaScript (can be left out if not used)
 @import "bootstrap/modals";
 @import "bootstrap/tooltip";
@@ -52,6 +53,80 @@
 @import "bootstrap/responsive-utilities";
 
 
-
 // CUSTOM: Import custom modules
-@import 'modules/module';
+@import 'modules/header';
+@import 'modules/footer';
+
+
+//Fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+body p {
+  text-align: center;
+}
+
+body h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 45px;
+  font-weight: 100; 
+  text-align: center;
+}
+
+body h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+}
+.background-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#position_block {
+  margin: 10px 0px;
+}
+
+#whiteText {
+  color: white;
+}
+
+.homelink {
+  color: #33d6ff;
+}
+
+.perks_list {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.perks_list img {
+  display: inline-block;
+}
+
+.perks_list p {
+  display: inline-block;
+  line-height: 36px;
+  vertical-align: middle;
+}
+
+.cta {
+  text-align: center;
+}
+
+.cta a {
+  color: #273c90;
+  border: 2px solid;
+}
+

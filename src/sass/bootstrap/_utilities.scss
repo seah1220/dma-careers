@@ -20,6 +20,81 @@
 }
 
 
+// Margins
+// -------------------------
+.offset-top-xs {
+  margin-top: 10px;
+}
+
+.offset-top-s {
+  margin-top: 20px;
+}
+
+.offset-top-sm {
+  margin-top: 30px;
+}
+
+.offset-top-lg {
+  margin-top: 150px;
+}
+
+.offset-bottom-sm {
+  margin-bottom: 30px;
+}
+
+.offset-bottom-lg {
+  margin-bottom: 150px;
+}
+
+.offset-left-xs {
+  margin-left: 10px;
+}
+
+.offset-left-sm {
+  margin-left: 30px;
+}
+
+.offset-right-xs {
+  margin-right: 10px;
+}
+
+.offset-right-sm {
+  margin-right: 30px;
+}
+
+
+// Paddings
+// -------------------------
+
+.no-inset {
+  padding: 0;
+}
+
+.inset-top-sm {
+  padding-top: 20px;
+}
+
+.inset-top-0 {
+  padding-top: 0;
+}
+
+.inset-bottom-sm {
+  padding-bottom: 20px;
+}
+
+.inset-bottom-0 {
+  padding-bottom: 0;
+}
+
+.inset-left-sm {
+  padding-left: 20px;
+}
+
+.inset-right-sm {
+  padding-right: 20px;
+}
+
+
 // Toggling content
 // -------------------------
 

@@ -25,12 +25,19 @@ html {
 }
 
 body {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
+  font-family: 'Bitter', serif;
+  font-weight: 400;
+  font-size: $font-size-large;
   line-height: $line-height-base;
   color: $text-color;
   background-color: $body-bg;
 }
+
+body h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
 
 // Reset fonts for relevant elements
 input,
